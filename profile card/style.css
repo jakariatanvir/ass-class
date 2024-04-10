@@ -41,5 +41,12 @@ body{
     margin-top: 6px;
     border: name;
     font-size: 14px;
+
+}
+.btn:hover{
+    color: #19a68c;
+    background: #e2e1e0;
+    transition: all 300ms linear;
+    cursor: pointer;
     
 }
