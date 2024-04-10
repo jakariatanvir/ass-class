@@ -27,3 +27,11 @@ body{
     color: #7c8097;
     font-size: 16px;
 }
+
+.desc{
+    font-size: 14px;
+    margin-left: 65px;
+    margin-right: 65px;
+    color: #ce0f7b;
+    margin-top: 16px;
+}
