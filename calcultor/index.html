@@ -16,23 +16,29 @@
     <option value="/">/</option>
     </select><br><br>
     number 2: <input type="number" id="number2"><br><br>
-    <button type="button">calculate</button><br><br>
+    <button type="button" onclick="myfunction()">calculate</button><br><br>
     <input type="number" id="result">
 
 
     <script>
-        function myfunction() {
+        function myfunction(){
         let num1 = document.getElementById('num1').value; 
         let num2 = document.getElementById('num2').value;
-        let calculate = document.getElementById('calculate').value
+        let calculate = document.getElementById('calculate').value;
 
 
+        if(calculate==='+'){
 
-
-
-
-
+            let num1 = perselnt(document.getElementById('num1').value);
+            let num2 = perselnt(document.getElementById('num2').value);
+            document.getElementById('result').value=num1+num2;
         }
+
+
+
+
+
+    }
 
 
 
