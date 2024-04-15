@@ -3,6 +3,8 @@ body{
     text-align: center;
     font-family: monospace;
     padding: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .card{
