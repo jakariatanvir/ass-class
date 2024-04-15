@@ -10,31 +10,39 @@
 <body>
     <h2>create simple calculator</h2>
 
-    number 1: <input type="number" id="number1"><br><br>
-    operations: <select id="calculator">
+    number 1: <input type="number" name ="number1" id="number1" step="any"/><br><br>
+    operations: <select id="ope">
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
         <option value="/">/</option>
 
     </select><br><br>
-    number 2: <input type="number" id="number2"><br><br>
+    number 2: <input type="number" name ="number2" id="number2" step="any"/><br><br>
 
-    <button type="button" value="calculate" onclick="answer()">calculate</button><br><br>
-    <input type="text" id="result">
+    <button onclick="cal()">calculate</button><br><br>
+    result : <input type="text"name ="" id="res" readonly/>
 
-    <script>
-        function calculator(newvalue){
-            document.getElementById("result").value += newvalue;
-
+    <script type="text/javascript">
+        function cal() {
+        var opr1 = document.getElementById('number1').value;
+        var opr2 = document.getElementById('number2').value;
+        var ope = document.getElementById('ope').value;
+        if (ope == '+') {
+            var res = parseInt(opr1) + parseInt(opr2);
         }
-    
+        if (ope == '-') {
+            var res = parseInt(opr1) - parseInt(opr2);
+        }
+        if (ope == '*') {
+            var res = parseInt(opr1) * parseInt(opr2);
+        }
+        if (ope == '/') {
+            var res = parseInt(opr1) / parseInt(opr2);
+        }
+        document.getElementById('res').value = res;
 
-        function answer() {
 
-            var a = document.getElementById("result").value;
-            var b = eval(a);
-            document.getElementById("result").value = b;
 
 
         }
