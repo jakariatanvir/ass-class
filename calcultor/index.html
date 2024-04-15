@@ -4,46 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
 </head>
 <body>
     <h2>create simple calculator</h2>
 
     number 1: <input type="number" id="number1"><br><br>
-    operations: <select id="calcuate">
-    <option value="+">+</option>
-    <option value="-">-</option>
-    <option value="*">*</option>
-    <option value="/">/</option>
+    operations: <select id="calculator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+
     </select><br><br>
     number 2: <input type="number" id="number2"><br><br>
-    <button type="button" onclick="myfunction()">calculate</button><br><br>
-    <input type="number" id="result">
 
+    <button type="button" value="calculate" onclick="answer()">calculate</button><br><br>
+    <input type="text" id="result">
 
     <script>
-        function myfunction(){
-        let num1 = document.getElementById('num1').value; 
-        let num2 = document.getElementById('num2').value;
-        let calculate = document.getElementById('calculate').value;
+        function calculator(newvalue){
+            document.getElementById("result").value += newvalue;
+
+        }
+    
+
+        function answer() {
+
+            var a = document.getElementById("result").value;
+            var b = eval(a);
+            document.getElementById("result").value = b;
 
 
-        if(calculate==='+'){
-
-            let num1 = perselnt(document.getElementById('num1').value);
-            let num2 = perselnt(document.getElementById('num2').value);
-            document.getElementById('result').value=num1+num2;
         }
 
-
-
-
-
-    }
-
-
-
-
     </script>
+
 
 </body>
 </html>
